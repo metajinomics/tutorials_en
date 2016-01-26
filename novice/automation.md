@@ -8,12 +8,10 @@ categories: jekyll update
 <div class="panel panel-warning">
   <div class="panel-heading">
     
-    <h4 class="panel-title"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Learning Objectives </h4>
+    <h4 class="panel-title"><span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span> Prerequisites </h4>
   </div>
   <div class="panel-body">
-    Panel content
-    *   Go through the modify-add-commit cycle for single and multiple files.
-    *   Explain where information is stored at each stage of Git commit workflow.
+   This lesson guides you through the basics of file systems and the shell. If you have stored files on a computer at all and recognize the word “file” and either “directory” or “folder” (two common words for the same thing), you’re ready for this lesson.
   </div>
 </div>
 
