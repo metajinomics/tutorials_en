@@ -11,17 +11,22 @@ automation. Download data.
 ~~~
 python something.py input output
 ~~~
+
 to automate,
+
 ~~~
 for x in globus/*hof/somthing*.fa ; do python something.py $x $x.output;done
 ~~~
 
 ## 2. use shell script
 pick up your favorate editor (eg. emacs, vim)
+
 ~~~
 emacs auto.sh
 ~~~
+
 type this
+
 ~~~
 for x in globus/*hof/somthing*.fa ; do python something.py $x $x.output;done
 ~~~
