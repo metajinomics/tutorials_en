@@ -7,7 +7,7 @@
 
 # Site settings
 title: Tutorials
-email: your-email@domain.com
+email: genase23@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This site has tutorials of shell automation and assembly
 baseurl: "/tutorials_en" # the subpath of your site, e.g. /blog
