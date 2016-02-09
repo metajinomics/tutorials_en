@@ -25,12 +25,12 @@ git push --set-upstream origin gh-pages
 ### 2. how to post
 you need to put this on the top
 ~~~
-
+---
 layout: post
 title:  "Setup github website"
 date:   2016-02-09 16:59:12 -0600
 categories: jekyll update
-\---
+---
 ~~~
 
 ### 3. set up project page
