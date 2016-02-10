@@ -6,6 +6,8 @@ categories: jekyll update
 ---
 
 ### 1. set up main page
+If you haven't install github, please follow here https://help.github.com/desktop/guides/getting-started/installing-github-desktop/
+and https://desktop.github.com
 
 
 #### Create a new repository named username.github.io
