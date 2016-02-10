@@ -12,9 +12,18 @@ and https://desktop.github.com
 
 #### Create a new repository named username.github.io
 #### install jekyll
+https://jekyllrb.com
 ~~~
+gem install jekyll
 jekyll new username.github.io
 cd username.github.io/
+~~~
+change config
+~~~
+like this
+~~~
+then push to github
+~~~
 git init
 git checkout --orphan gh-pages
 git remote add origin https://github.com/username/username.github.io.git
