@@ -2,10 +2,24 @@
 layout: page
 title: "The Shell"
 comments: true
-date: 2014-07-30
+date: 2016-02-19
 ---
 
 # The Shell
+Adapted from the lesson by Tracy Teal.
+Original contributors:
+Paul Wilson, Milad Fatenejad, Sasha Wood and Radhika Khetani for Software Carpentry (http://software-carpentry.org/)
+
+## Learning Objectives
+- What is the shell?
+- How do you access it?
+- How do you use it?
+  - Getting around the Unix file system
+  - looking at files
+  - manipulating files
+  - automating tasks
+- What is it good for?
+- Where are resources where I can learn more? (because the shell is awesome)
 
 ## What is the shell?
 
@@ -25,7 +39,7 @@ knowing how to use the shell is transformative.
 * To use remote computers or cloud computing, you need to use the shell.
 
 
-![Automation](../img/gvng.jpg)
+![Automation](img/gvng.jpg)
 
   Unix is user-friendly. It's just very selective about who its friends are.
 
@@ -84,16 +98,18 @@ After loggin on, let's check out the example data.
 
 Let's go into the sample data  directory
 
-      cd dc_sample data
+      cd dc_sample_data
 
 'cd' stands for 'change directory'
 
 Let's see what is in here. Type
-      ls
-
+```
+ls
+```
 You will see
-    sra_metadata  untrimmed_fastq
-
+```
+sra_metadata  untrimmed_fastq
+```
 ls stands for 'list' and it lists the contents of a directory.
 
 There are two items listed.  What are they? We can use a command line argumant with 'ls' to get more information.
@@ -115,11 +131,14 @@ to see whether items in a directory are files or directories. `ls -l` gives a lo
 information too.
 
 Let's go into the untrimmed_fastq directory and see what is in there.
-
+```
     cd untrimmed_fastq
     ls -F
+```
+then
+```
     SRR097977.fastq  SRR098026.fastq
-
+```
 There are two items in this directory with no trailing slash, so they are files.
 
 
@@ -177,7 +196,7 @@ This is called a hierarchical file system structure, like an upside down tree
 with root (/) at the base that looks like this.
 
 
-![Unix](../img/Slide1.jpg)
+![Unix](/img/Slide1.jpg)
 
 That (/) at the base is often also called the 'top' level.
 
@@ -548,17 +567,17 @@ to see the beginning or end of the file, or see how it's formatted.
 
 The commands are `head` and `tail` and they just let you look at
 the beginning and end of a file respectively.
-
+```
 head SRR098026.fastq
 tail SRR098026.fastq
-
+```
 The `-n` option to either of these commands can be used to print the
 first or last `n` lines of a file. To print the first/last line of the
 file use:
-
+```
 head -n 1 SRR098026.fastq
 tail -n 1 SRR098026.fastq
-
+```
 
 ## Creating, moving, copying, and removing
 
@@ -648,11 +667,11 @@ a file that contains the favorite grep command so you can remember it for later.
 
 Now you have something that looks like
 
-![nano1.png](../img/nano1.png)
+![nano1.png](img/nano1.png)
 
 Type in your command, so it looks like
 
-![nano2.png](../img/nano2.png)
+![nano2.png](img/nano2.png)
 
 Now we want to save the file and exit. At the bottom of nano, you see the "^X Exit". That
 means that we use Ctrl-X to exit. Type `Ctrl-X`. It will ask if you want to save it. Type `y` for yes.
