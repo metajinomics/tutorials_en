@@ -1,8 +1,8 @@
---
+---
 layout: page
 title: "The Shell"
 comments: true
-date: 2015-07-30
+date: 2016-02-19
 ---
 
 # The Shell
@@ -124,17 +124,23 @@ Let's ask a few questions about the data
 1) How many of the read libraries are paired end?
 
 First, what are the column headers?
-
+```
     head -n 1 SraRunTable.txt
+```
+then
+```
     BioSample_s	InsertSize_l	LibraryLayout_s	Library_Name_s	LoadDate_s	MBases_l	MBytes_l	ReleaseDate_s Run_s SRA_Sample_s Sample_Name_s Assay_Type_s AssemblyName_s BioProject_s Center_Name_s Consent_s Organism_Platform_s SRA_Study_s g1k_analysis_group_s g1k_pop_code_s source_s strain_s
-
+```
 That's only the first line but it is a lot to take in.  'cut' is a program that will extract columns in tab-delimited
 files.  It is a very good command to know.  Lets look at just the first four columns in the header using the '|' readirect
 and 'cut'
-
+```
     head -n 1 SraRunTable.txt | cut -f1-4
+```
+then
+```
     BioSample_s InsertSize_l      LibraryLayout_s	Library_Name_s    
-
+```
 '-f1-4' means to cut the first four fields (columns).  The LibraryLayout_s column looks promising.  Let's look at some data for just that column.
 
     cut -f3 SraRunTable.txt | head -n 10
@@ -197,8 +203,80 @@ OK, we are good to go.
 ****
 
  
+## Search file: where is my file?
+While grep finds lines in files, the find command finds files themselves. Again, it has a lot of options; to show how the simplest ones work, we’ll use the directory tree shown below.
 
+For our first command, let’s run find . -type d. As always, the . on its own means the current working directory, which is where we want our search to start; -type d means “things that are directories”. Sure enough, find’s output is the names of the five directories in our little tree (including .):
 
+```
+$ find . -type d
+```
+then
+```
+./
+./data
+./thesis
+./tools
+./tools/old
+```
+If we change -type d to -type f, we get a listing of all the files instead:
+```
+$ find . -type f
+```
+then
+```
+./haiku.txt
+./tools/stats
+./tools/old/oldtool
+./tools/format
+./thesis/empty-draft.md
+./data/one.txt
+./data/two.txt
+```
+find automatically goes into subdirectories, their subdirectories, and so on to find everything that matches the pattern we’ve given it. If we don’t want it to, we can use -maxdepth to restrict the depth of search:
+```
+$ find . -maxdepth 1 -type f
+```
+then
+```
+./haiku.txt
+```
+The opposite of -maxdepth is -mindepth, which tells find to only report things that are at or below a certain depth. -mindepth 2 therefore finds all the files that are two or more levels below us:
+```
+
+$ find . -mindepth 2 -type f
+```
+then
+```
+./data/one.txt
+./data/two.txt
+./tools/format
+./tools/stats
+```
+Now let’s try matching by name:
+```
+$ find . -name *.txt
+```
+then
+```
+./haiku.txt
+```
+We expected it to find all the text files, but it only prints out ./haiku.txt. The problem is that the shell expands wildcard characters like * before commands run. Since *.txt in the current directory expands to haiku.txt, the command we actually ran was:
+```
+$ find . -name haiku.txt
+```
+find did what we asked; we just asked for the wrong thing.
+
+To get what we want, let’s do what we did with grep: put *.txt in single quotes to prevent the shell from expanding the * wildcard. This way, find actually gets the pattern *.txt, not the expanded filename haiku.txt:
+```
+$ find . -name '*.txt'
+```
+then
+```
+./data/one.txt
+./data/two.txt
+./haiku.txt
+```
 ## Where can I learn more about the shell?
 
 - Software Carpentry tutorial - [The Unix shell](http://software-carpentry.org/v4/shell/index.html)
