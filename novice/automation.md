@@ -15,18 +15,27 @@ categories: jekyll update
   </div>
 </div>
 
+### before start,
+here is the data http://swcarpentry.github.io/shell-novice/shell-novice-data.zip 
 
-automation. Download data. 
+Download, copy into your Desktop, unzip.
 
-## 1. for loop 
+I expect you use Mac.
+
+To move into your foler type
+```
+cd ~/Desktop/data-shell
+```
+## 1. for loop
+Let's learn for loop. To print what files are in you forder /data/pdb, you can try this 
 ~~~
-python something.py input output
+echo "My file name is aldrin.pdb"
 ~~~
 
 to automate,
 
 ~~~
-for x in globus/*hof/somthing*.fa ; do python something.py $x $x.output;done
+for x in data/pdb/*.pdb ; do echo "My File name is $x";done
 ~~~
 
 ## 2. use shell script
@@ -39,8 +48,17 @@ emacs auto.sh
 type this
 
 ~~~
-for x in globus/*hof/somthing*.fa ; do python something.py $x $x.output;done
+#!/bin/bash
+cd ~/Desktop/data-shell
+for x in data/pdb/*.pdb ; do echo "My File name is $x";done
 ~~~
+
+to run this
+
+```
+bash auto.sh
+```
 
 ## 3. make file
 make, make all, etc. 
+This will be described later
