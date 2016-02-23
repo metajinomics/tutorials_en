@@ -15,7 +15,8 @@ categories: jekyll update
   </div>
 </div>
 
-### before start,
+## before start,
+
 here is the data http://swcarpentry.github.io/shell-novice/shell-novice-data.zip 
 
 Download, copy into your Desktop, unzip.
@@ -23,9 +24,11 @@ Download, copy into your Desktop, unzip.
 I expect you use Mac.
 
 To move into your foler type
-```
+
+~~~
 cd ~/Desktop/data-shell
-```
+~~~
+
 ## 1. for loop
 Let's learn for loop. To print what files are in you forder /data/pdb, you can try this 
 ~~~
