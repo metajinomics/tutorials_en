@@ -7,7 +7,7 @@ categories: jekyll update
 
 ## How to make a tree
 This tutorial shows how to make a tree such as this
-
+![tree](https://github.com/metajinomics/tutorials_en/edit/gh-pages/novice/fiiles/new_tree_gc_new_name_box.png)
 ### Download seq for type strain
 
 ### fetch 16s seq from type strain
