@@ -8,6 +8,7 @@ categories: jekyll update
 ## How to make a tree
 This tutorial shows how to make a tree such as this
 ![tree](https://raw.githubusercontent.com/metajinomics/tutorials_en/gh-pages/novice/files/new_tree_gc_new_name_box.png)
+Lian, J., Choi, J., Tan, Y. S., Howe, A., Wen, Z., & Jarboe, L. R. (2016). Identification of Soil Microbes Capable of Utilizing Cellobiosan. PLoS ONE, 11(2), e0149336. http://doi.org/10.1371/journal.pone.0149336
 ### Download seq for type strain
 [Download sequences](https://raw.githubusercontent.com/metajinomics/tutorials_en/gh-pages/novice/files/list_type_strain.txt)
 This file contains Ids
