@@ -15,5 +15,27 @@ mgm4675652.3|contig1_1_267_+	da04c4adee3bd96fdcf7832f4975d49f	63.46	52	19		34	85
 mgm4675652.3|contig4_1_810_-	de964a17f0160d3701ac605ab9bc2db8	69.33	150	46		1	150	429	578	1.5e-56	217.0	hypothetical protein;predicted dehydratase;hypothetical protein;hypothetical protein;hypothetical protein;KpLE2 phage-like element; predicted dehydratase
 mgm4675652.3|contig2_1_891_+	e22eb02fe8ae07483daa01a8adbf68d1	72.22	126	35		1	126	350	475	4.8e-51	199.0	2-oxoglutarate dehydrogenase E1 component (EC:1.2.4.2)
 ```
+### Write python script to read file, then get 'query sequence id' and 'desciption' for each line
+Sample:
+```
+ids = mgm4675652.3|contig5_1_1093_-
+description = methanol dehydrogenase regulator
+```
 
-add 'query sequence id' and 'descriptio' into dictionary
+### add 'query sequence id' as a key and 'description' as contents into dictionary
+Sample:
+```
+{mgm4675652.3|contig5_1_1093_-:'methanol dehydrogenase regulator', mgm4675652.3|contig4_1_810_-:'hypothetical protein'}
+```
+
+### There are redundant ids, then use ';' to add all description
+Sample:
+```
+{mgm4675652.3|contig5_1_1093_-:'protein MoxR (protein MxaR);putative regulatory protein'}
+```
+### Now, your ID want to look like 'contig1' instead of 'mgm4675652.3|contig5_1_1093_-'
+Sample:
+```
+{contig1:'nicotinate-nucleotide pyrophosphorylase (EC:2.4.2.19)'}
+```
+
