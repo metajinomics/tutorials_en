@@ -2,7 +2,7 @@
 layout: post
 title:  "How to make a tree"
 date:   2016-02-12 13:59:12 -0600
-categories: jekyll update
+
 ---
 
 ## How to make a tree
