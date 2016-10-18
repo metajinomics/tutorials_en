@@ -14,8 +14,8 @@ for x in *.bam;do echo "samtools sort $x $x.sorted";done >command.sort.sh
 cat command.sort.sh|parallel
 for x in *.sorted.bam;do echo "samtools index $x";done > command.index.sh
 cat command.index.sh |parallel
-for x in *.sorted.bam;do echo "samtools idxstats $x > $x.idstats.txt";done > command.idstats.sh
-cat command.idstats.sh |parallel
+for x in *.sorted.bam;do echo "samtools idxstats $x > $x.idxstats.txt";done > command.idxstats.sh
+cat command.idxstats.sh |parallel
 ```
 ### merge count
 ```
