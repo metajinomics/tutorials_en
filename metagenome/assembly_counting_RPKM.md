@@ -26,6 +26,6 @@ python Metagenome/get_count_table.py *.idxstats.txt > counts.txt
 ### calculate RPKM
 ```
 git clone https://github.com/metajinomics/get_rpkm.git
-g++ get_rpkm/Get_RPKM_for_assembly.cpp -o get_rpkmGet_RPKM_for_assembly 
+g++ get_rpkm/Get_RPKM_for_assembly.cpp -o get_rpkm/Get_RPKM_for_assembly 
 ./get_rpkm/Get_RPKM_for_assembly counts.txt normal_counts.txt
 ```
