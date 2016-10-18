@@ -19,8 +19,8 @@ cat command.idxstats.sh |parallel
 ```
 ### merge count
 ```
-git clone https://github.com/edamame-course/Metagenome.git
-python Metagenome/get_count_table.py *.idxstats.txt > counts.txt
+git clone https://github.com/metajinomics/ngs_tools
+python ngs_tools/get_count_table.py *.idxstats.txt > counts.txt
 ```
 
 ### calculate RPKM
