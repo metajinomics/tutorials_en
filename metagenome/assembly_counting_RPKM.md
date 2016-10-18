@@ -1,4 +1,14 @@
 # Calculate RPKM from assembly
+
+#### install software
+```
+wget http://sourceforge.net/projects/bowtie-bio/files/bowtie2/2.2.5/bowtie2-2.2.5-linux-x86_64.zip
+unzip bowtie2-2.2.5-linux-x86_64.zip
+mv bowtie2-2.2.5 ~/BT2_HOME
+PATH=$PATH:~/BT2_HOME
+export PATH
+```
+
 ###After you have assembly, you want to map your raw-read onto the assembled contig to count. First, mapping (Let me say your assembly file is assembly.fna)
 
 ```
