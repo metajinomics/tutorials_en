@@ -33,13 +33,14 @@ cd ..
 
 #### run htseq
 ```
-for x in *.sorted.bam;do echo "htseq-count -f bam $x your.gff > $x.count.txt";done > command.htseq.sh
+git clone https://github.com/metajinomics/ngs_tools.git
+python ngs_tools/fix_gtf.py your.gff > your.gtf
+for x in *.sorted.bam;do echo "htseq-count -f bam $x your.gtf > $x.count.txt";done > command.htseq.sh
 cat command.htseq.sh|parallel
 ```
 
 #### get count table
 ```
-git clone https://github.com/metajinomics/ngs_tools.git
 python ngs_tools/htseq_to_count.py your.gtf *bam.count.txt > counts.txt
 ```
 
